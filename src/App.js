@@ -1,7 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/layaut/Navbar";
 
-function App() {
-  return <div className="App">mario plan</div>;
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
