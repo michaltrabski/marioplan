@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SignInLinks from "./SignInLinks";
-import SignOutLinks from "./SignOutLinks";
+import SignedInLinks from "./SignedInLinks";
+import SignedOutLinks from "./SignedOutLinks";
 
 const Navbar = () => {
   return (
@@ -10,8 +10,8 @@ const Navbar = () => {
         <Link to="/" className="brand-logo">
           MarioPan
         </Link>
-        <SignInLinks />
-        <SignOutLinks />
+        <SignedInLinks />
+        <SignedOutLinks />
       </div>
     </nav>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const SignInLinks = () => {
+const SignedInLinks = () => {
   return (
     <ul className="right">
       <li>
@@ -14,4 +14,4 @@ const SignInLinks = () => {
   );
 };
 
-export default SignInLinks;
+export default SignedInLinks;
