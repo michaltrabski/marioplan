@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class CreateProject extends Component {
   state = {
@@ -12,7 +13,13 @@ class CreateProject extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    const project = {
+      id: "4",
+      title: this.state.title,
+      content: this.state.content
+    };
+    this.props.addProject(project);
+    // console.log(this.props, project);
   };
   render() {
     return (
@@ -40,4 +47,12 @@ class CreateProject extends Component {
   }
 }
 
-export default CreateProject;
+const mapDispatchToProps = dispatch => {
+  return {
+    addProject: project => dispatch({ type: "ADD_PROJECT", project })
+  };
+};
+export default connect(
+  null,
+  mapDispatchToProps
+)(CreateProject);

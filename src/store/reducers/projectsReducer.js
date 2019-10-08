@@ -6,6 +6,17 @@ const initState = {
   ]
 };
 
-const projectReducer = (state = initState, action) => state;
+const projectReducer = (state = initState, action) => {
+  console.log(action);
+
+  if (action.type === "ADD_PROJECT") {
+    state = {
+      ...state,
+      projects: [...state.projects, action.project]
+    };
+  }
+  console.log(state);
+  return state;
+};
 
 export default projectReducer;
