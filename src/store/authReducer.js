@@ -1,3 +1,7 @@
-const authReducer = (state = { yyy: "yyy" }, action) => state;
+const initState = {
+  loggedIn: false
+};
+
+const authReducer = (state = initState, action) => state;
 
 export default authReducer;
