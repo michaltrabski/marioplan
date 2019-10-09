@@ -19,7 +19,6 @@ class CreateProject extends Component {
       content: this.state.content
     };
     this.props.createProject(project);
-    // console.log(this.props, project);
   };
   render() {
     return (
