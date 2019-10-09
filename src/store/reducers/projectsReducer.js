@@ -9,7 +9,7 @@ const initState = {
 const projectReducer = (state = initState, action) => {
   console.log(action);
 
-  if (action.type === "ADD_PROJECT") {
+  if (action.type === "CREATE_PROJECT") {
     state = {
       ...state,
       projects: [...state.projects, action.project]

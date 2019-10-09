@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { createProject } from "../../store/actions/projectActions";
 
 class CreateProject extends Component {
   state = {
@@ -18,7 +19,7 @@ class CreateProject extends Component {
       title: this.state.title,
       content: this.state.content
     };
-    this.props.addProject(project);
+    this.props.createProject(project);
     // console.log(this.props, project);
   };
   render() {
@@ -49,7 +50,7 @@ class CreateProject extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    addProject: project => dispatch({ type: "ADD_PROJECT", project })
+    createProject: project => dispatch(createProject(project))
   };
 };
 export default connect(
