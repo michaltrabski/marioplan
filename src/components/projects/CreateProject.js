@@ -15,7 +15,6 @@ class CreateProject extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const project = {
-      id: "4",
       title: this.state.title,
       content: this.state.content
     };
